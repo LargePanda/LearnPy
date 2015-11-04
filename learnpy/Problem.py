@@ -12,7 +12,11 @@ class Problem:
 
         # define data set
         self.file_path = file_path
+        self.data = None
         self.read_data()
+
+        # define label
+        self.label = None
 
     def check_type(self):
         if self.problem_type in ['BinaryClassification', 'MultiClassification']:
@@ -20,6 +24,12 @@ class Problem:
 
     def read_data(self):
         try:
-            self.data = open(self.file_path, 'r')
+            self.data = pd.read_csv(self.file_path)
         except IOError:
             raise
+
+    def set_label(self, label):
+        if label in self.data.columns:
+            self.label = label
+        else:
+            raise Exception("Label column does not exist")
