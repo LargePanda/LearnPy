@@ -7,7 +7,7 @@ class Problem:
     def __init__(self, problem_type=None, file_path=None):
 
         # define problem type
-        self.problem_type = type
+        self.problem_type = problem_type
         self.check_type()
 
         # define data set
@@ -17,6 +17,8 @@ class Problem:
 
         # define label
         self.label = None
+        self.check_label()
+
 
     def check_type(self):
         if self.problem_type in ['BinaryClassification', 'MultiClassification']:
@@ -31,5 +33,12 @@ class Problem:
     def set_label(self, label):
         if label in self.data.columns:
             self.label = label
+            self.data[label] = self.data[label].astype(str)
         else:
             raise Exception("Label column does not exist.")
+
+    def check_label(self):
+        stat = pd.DataFrame.summary(self.data[self.label])
+        if(self.problem_type == 'BinaryClassification' and stat['unique'] !=2) \
+                or (self.problem_type == 'MultiClassification' and stat['unique'] <= 2):
+            raise Exception("Number of unique items is not consistent with problem type")
