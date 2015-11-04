@@ -32,4 +32,4 @@ class Problem:
         if label in self.data.columns:
             self.label = label
         else:
-            raise Exception("Label column does not exist")
+            raise Exception("Label column does not exist.")
