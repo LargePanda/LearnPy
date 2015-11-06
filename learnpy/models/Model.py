@@ -1,24 +1,23 @@
 __author__ = 'Jiarui Xu'
 
-from learnpy.models.Model import Model
+from abc import ABCMeta, abstractmethod
 
 # to be implemented next week
 
-class SvmModel(Model):
-    def __init__(self):
-        print("Support Vector Machine")
+class Model(metaclass=ABCMeta):
 
+    @abstractmethod
     def fit(self, data):
         pass
 
+    @abstractmethod
     def predict(self, data):
         pass
 
+    @abstractmethod
     def summary(self):
         pass
 
+    @abstractmethod
     def report(self):
         pass
-
-
-
