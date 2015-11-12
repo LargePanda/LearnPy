@@ -11,7 +11,12 @@ import time
 
 class NaiveBayes(Model):
     def __init__(self, data, class_column):
-
+        """
+        Constructor for the Naive Bayes Model
+        :param data:
+        :param class_column:
+        :return:
+        """
         # create report
         self.predict_summary = None
         self.fit_report = None
@@ -24,14 +29,22 @@ class NaiveBayes(Model):
         col_data = self.data[class_column]
         self.class_list = unique_list(col_data)
 
+        # get numeric columns and categorical columns
         self.num_cols, self.cat_cols = get_both_columns(self.data, class_column)
 
+        # Build the pro
         self.prob_hub = {}
         self.fit(self.data)
         res = self.predict(self.data)
         print("Naive Bayes Model")
 
     def predict(self, data, golden):
+        """
+        Predict the labels for a given data set
+        :param data:
+        :param golden:
+        :return:
+        """
         result = []
         for r in range(0, len(data)):
             label = self.predict_single(data.iloc[r])
@@ -47,7 +60,12 @@ class NaiveBayes(Model):
         return result
 
     def predict_single(self, line):
-        #print(line)
+        """
+        Predict the label on a data row
+        :param line: a data row
+        :return:
+        """
+        # print(line)
         prob_list = {}
         for claz in self.class_list:
             prob_list[claz] = 1
@@ -61,6 +79,7 @@ class NaiveBayes(Model):
         # for each num column
         for col in self.num_cols:
             val = line[col]
+            # for each class
             for claz in self.class_list:
                 mean, std = self.prob_hub[col][claz]
                 prob_list[claz] *= calculate_prob(val, mean, std)
@@ -70,6 +89,22 @@ class NaiveBayes(Model):
 
 
     def fit(self, data):
+        """
+        Fit the model onto the given data set.
+        :param data:
+        :return:
+        """
+        if data is None:
+            self.train_self()
+        else:
+            # not needed this week
+            pass
+
+    def train_self(self):
+        """
+        Train the model on the data set in the model
+        :return:
+        """
         # for each numeric column, we need to record mean and std for both classes
         for col in self.num_cols:
             self.prob_hub[col] = {}
@@ -84,6 +119,7 @@ class NaiveBayes(Model):
             self.prob_hub[col] = {}
             stat = self.data.groupby(self.class_column)[col].value_counts() / self.data.groupby(self.class_column)[col].count()
             print(stat)
+            # for each class
             for claz in self.class_list:
                 self.prob_hub[col][claz] = {}
                 for uni_element in ulist:
