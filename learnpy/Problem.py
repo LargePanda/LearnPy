@@ -2,13 +2,15 @@ __author__ = 'Jiarui Xu'
 
 import pandas as pd
 import json as json
+from learnpy.models.NeuralNetwork import NeuralNetwork
+from learnpy.models.NaiveBayes import NaiveBayes
 
 
 class Problem:
     """ A problem is a definition of a machine learning problem.
 
     """
-    def __init__(self, problem_type=None, file_path=None, model=None):
+    def __init__(self, problem_type=None, file_path=None, model_label=None):
         """ Init function for Problem
         :param problem_type: it should be one of the defined types
         :param file_path: a file path to read data from
@@ -33,9 +35,15 @@ class Problem:
             self.check_label()
 
         # define model
-        self.model = model
-        if model is not None:
+        self.model_label = model_label
+        self.model = None
+        if model_label is not None:
             self.check_model()
+            self.create_model()
+
+
+
+
 
     def check_type(self):
         """ Check if problem type is defined
@@ -50,7 +58,7 @@ class Problem:
         :param self:
         :return:
         """
-        stat = pd.DataFrame.summary(self.data[self.label])
+        stat = pd.DataFrame.describe(self.data[self.label])
         if(self.problem_type == 'BinaryClassification' and stat['unique'] != 2) \
                 or (self.problem_type == 'MultiClassification' and stat['unique'] <= 2):
             raise Exception("Number of unique items is not consistent with problem type")
@@ -60,7 +68,7 @@ class Problem:
         :param self:
         :return:
         """
-        if self.model not in ['SVM', 'NaiveBayes', 'NeuralNetwork']:
+        if self.model_label not in ['SVM', 'NaiveBayes', 'NeuralNetwork']:
             raise Exception('Model is not defined')
 
     def set_model(self, model):
@@ -69,8 +77,9 @@ class Problem:
         :param model: model to be set
         :return:
         """
-        self.model = model
+        self.model_label = model
         self.check_model()
+        self.create_model()
 
     def read_data(self):
         """ Read data from the file_path
@@ -104,7 +113,7 @@ class Problem:
         problem = dict()
         problem["problem_type"] = self.problem_type
         problem["label"] = self.label
-        problem["model"] = self.model
+        problem["model_label"] = self.model_label
 
         self.data.to_json(data_path)
         print("Saved the data to ", data_path)
@@ -126,7 +135,14 @@ class Problem:
         # read problem description
         self.label = problem['label']
         self.problem_type = problem['problem_type']
-        self.model = problem['model']
+        self.model_label = problem['model_label']
 
         # load data
         self.data = pd.read_json(data_path)
+
+    def create_model(self):
+        if self.model_label == 'NaiveBayes':
+            self.model = NaiveBayes(self.data, self.label)
+
+        elif self.model_label == "NeuralNetwork":
+            self.model = NeuralNetwork(self.data, self.label)

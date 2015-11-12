@@ -1,5 +1,5 @@
 {
- "problem_type": "BinaryClassification",
+ "label": "Name",
  "model": null,
- "label": "Name"
+ "problem_type": "BinaryClassification"
 }
