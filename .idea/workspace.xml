@@ -2,11 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3e8f1ba5-612a-49a0-af0e-cd5fd2e73914" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/learnpy/tests/unittests/ModelUtilTest.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/learnpy/tests/unittests/NaiveBayesTest.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/learnpy/tests/unittests/NeuralNetworkTest.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/learnpy/models/ModelUtil.py" afterPath="$PROJECT_DIR$/learnpy/models/ModelUtil.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/learnpy/models/NaiveBayes.py" afterPath="$PROJECT_DIR$/learnpy/models/NaiveBayes.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/learnpy/tools/TweetSentiment.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/learnpy/tools/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/examples/project_example/tweet_project.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/nb_example.py" afterPath="$PROJECT_DIR$/examples/nb_example.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="LearnPy.iws" />
@@ -22,14 +21,15 @@
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/LearnPy$Model.coverage" NAME="Model Coverage Results" MODIFIED="1446748207031" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/learnpy/models" />
-    <SUITE FILE_PATH="coverage/LearnPy$nb_example.coverage" NAME="nb_example Coverage Results" MODIFIED="1447344529733" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/examples" />
+    <SUITE FILE_PATH="coverage/LearnPy$nb_example.coverage" NAME="nb_example Coverage Results" MODIFIED="1447382366869" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/examples" />
     <SUITE FILE_PATH="coverage/LearnPy$Unittests_in_ProblemTest.coverage" NAME="Unittests in ProblemTest Coverage Results" MODIFIED="1446768267443" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests/unittests" />
     <SUITE FILE_PATH="coverage/LearnPy$Unittests_in_ModelUtilTest.coverage" NAME="Unittests in ModelUtilTest Coverage Results" MODIFIED="1447372472221" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/learnpy/tests/unittests" />
-    <SUITE FILE_PATH="coverage/LearnPy$Unittests_in_NaiveBayesTest.coverage" NAME="Unittests in NaiveBayesTest Coverage Results" MODIFIED="1447373442744" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/learnpy/tests/unittests" />
+    <SUITE FILE_PATH="coverage/LearnPy$Unittests_in_NaiveBayesTest.coverage" NAME="Unittests in NaiveBayesTest Coverage Results" MODIFIED="1447382518654" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/learnpy/tests/unittests" />
+    <SUITE FILE_PATH="coverage/LearnPy$tweet_project.coverage" NAME="tweet_project Coverage Results" MODIFIED="1447382635493" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/examples/project_example" />
     <SUITE FILE_PATH="coverage/LearnPy$Problem.coverage" NAME="Problem Coverage Results" MODIFIED="1446635233775" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/learnpy" />
     <SUITE FILE_PATH="coverage/LearnPy$svm_example.coverage" NAME="svm_example Coverage Results" MODIFIED="1447309475882" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/examples" />
     <SUITE FILE_PATH="coverage/LearnPy$NaiveBayes.coverage" NAME="NaiveBayes Coverage Results" MODIFIED="1446751772485" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/learnpy/models" />
-    <SUITE FILE_PATH="coverage/LearnPy$ann_example.coverage" NAME="ann_example Coverage Results" MODIFIED="1447366826996" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/examples" />
+    <SUITE FILE_PATH="coverage/LearnPy$ann_example.coverage" NAME="ann_example Coverage Results" MODIFIED="1447382491972" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/examples" />
     <SUITE FILE_PATH="coverage/LearnPy$Unittests_in_ProblemTest__1_.coverage" NAME="Unittests in ProblemTest (1) Coverage Results" MODIFIED="1446768397165" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/learnpy/tests/unittests" />
     <SUITE FILE_PATH="coverage/LearnPy$NeuralNetwork.coverage" NAME="NeuralNetwork Coverage Results" MODIFIED="1446706599168" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests/comparisons/NeuralNetworkExternal" />
     <SUITE FILE_PATH="coverage/LearnPy$SVM_scikit.coverage" NAME="SVM_scikit Coverage Results" MODIFIED="1446706132300" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests/comparisons" />
@@ -44,24 +44,101 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="NeuralNetworkTest.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/learnpy/tests/unittests/NeuralNetworkTest.py">
+      <file leaf-file-name="NaiveBayesTest.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/learnpy/tests/unittests/NaiveBayesTest.py">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="12" column="37" selection-start-line="12" selection-start-column="37" selection-end-line="12" selection-end-column="37" />
+              <caret line="28" column="18" selection-start-line="28" selection-start-column="8" selection-end-line="28" selection-end-column="18" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="NeuralNetwork.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/learnpy/models/NeuralNetwork.py">
+      <file leaf-file-name="NeuralNetworkTest.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/learnpy/tests/unittests/NeuralNetworkTest.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="1.1946309">
-              <caret line="124" column="0" selection-start-line="124" selection-start-column="0" selection-end-line="124" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="25" column="31" selection-start-line="25" selection-start-column="31" selection-end-line="25" selection-end-column="31" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ModelUtilTest.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/learnpy/tests/unittests/ModelUtilTest.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="37" column="16" selection-start-line="37" selection-start-column="16" selection-end-line="37" selection-end-column="16" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TweetSentiment.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/learnpy/tools/TweetSentiment.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.062080536">
+              <caret line="16" column="26" selection-start-line="16" selection-start-column="26" selection-end-line="16" selection-end-column="26" />
               <folding>
-                <element signature="e#26#64#0" expanded="true" />
+                <element signature="e#26#41#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="tweet_project.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/examples/project_example/tweet_project.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="5" column="27" selection-start-line="5" selection-start-column="27" selection-end-line="5" selection-end-column="27" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pie2.png" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/examples/project_example/pie2.png">
+          <provider selected="true" editor-type-id="images">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="nb_example.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/examples/nb_example.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="11" column="18" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="18" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="NaiveBayes.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/learnpy/models/NaiveBayes.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="125" column="0" selection-start-line="125" selection-start-column="0" selection-end-line="125" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ann_example.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/examples/ann_example.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="14" column="19" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="19" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ModelUtil.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/learnpy/models/ModelUtil.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="127" column="30" selection-start-line="127" selection-start-column="30" selection-end-line="127" selection-end-column="30" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -96,16 +173,20 @@
         <option value="$PROJECT_DIR$/learnpy/tests/unittests/ProblemTest.py" />
         <option value="$PROJECT_DIR$/learnpy/models/Untitled.ipynb" />
         <option value="$PROJECT_DIR$/examples/data/iris.csv" />
-        <option value="$PROJECT_DIR$/examples/nb_example.py" />
         <option value="$PROJECT_DIR$/examples/data/mock_digit.csv" />
         <option value="$PROJECT_DIR$/learnpy/Problem.py" />
         <option value="$PROJECT_DIR$/examples/ann_example.py" />
         <option value="$PROJECT_DIR$/learnpy/models/ModelUtil.py" />
         <option value="$PROJECT_DIR$/learnpy/tests/unittests/ModelUtilTest.py" />
-        <option value="$PROJECT_DIR$/learnpy/models/NaiveBayes.py" />
         <option value="$PROJECT_DIR$/learnpy/tests/unittests/NaiveBayesTest.py" />
         <option value="$PROJECT_DIR$/learnpy/models/NeuralNetwork.py" />
         <option value="$PROJECT_DIR$/learnpy/tests/unittests/NeuralNetworkTest.py" />
+        <option value="$PROJECT_DIR$/examples/project_examples/yelp_sentiment.ipynb" />
+        <option value="$PROJECT_DIR$/learnpy/tools/__init__.py" />
+        <option value="$PROJECT_DIR$/examples/nb_example.py" />
+        <option value="$PROJECT_DIR$/learnpy/models/NaiveBayes.py" />
+        <option value="$PROJECT_DIR$/examples/project_example/tweet_project.py" />
+        <option value="$PROJECT_DIR$/learnpy/tools/TweetSentiment.py" />
       </list>
     </option>
   </component>
@@ -174,6 +255,24 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="learnpy" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="LearnPy" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="LearnPy" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="learnpy" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tools" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -263,6 +362,24 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="project_example" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="LearnPy" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="LearnPy" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="examples" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="data" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -298,25 +415,7 @@
       <recent name="$PROJECT_DIR$/learnpy" />
     </key>
   </component>
-  <component name="RunManager" selected="Python tests.Unittests in NaiveBayesTest">
-    <configuration default="false" name="svm_example" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/examples" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="LearnPy" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/examples/svm_example.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="Python.tweet_project">
     <configuration default="false" name="nb_example" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -397,6 +496,24 @@
       <option name="PUREUNITTEST" value="true" />
       <option name="PARAMS" value="" />
       <option name="USE_PARAM" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="tweet_project" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/examples/project_example" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="LearnPy" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/examples/project_example/tweet_project.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
     </configuration>
     <configuration default="true" type="DjangoTestsConfigurationType" factoryName="Django tests">
@@ -588,19 +705,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Python.svm_example" />
-      <item index="1" class="java.lang.String" itemvalue="Python.nb_example" />
-      <item index="2" class="java.lang.String" itemvalue="Python.ann_example" />
-      <item index="3" class="java.lang.String" itemvalue="Python tests.Unittests in ModelUtilTest" />
-      <item index="4" class="java.lang.String" itemvalue="Python tests.Unittests in NaiveBayesTest" />
+      <item index="0" class="java.lang.String" itemvalue="Python.nb_example" />
+      <item index="1" class="java.lang.String" itemvalue="Python.ann_example" />
+      <item index="2" class="java.lang.String" itemvalue="Python tests.Unittests in ModelUtilTest" />
+      <item index="3" class="java.lang.String" itemvalue="Python tests.Unittests in NaiveBayesTest" />
+      <item index="4" class="java.lang.String" itemvalue="Python.tweet_project" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python tests.Unittests in NaiveBayesTest" />
-        <item index="1" class="java.lang.String" itemvalue="Python tests.Unittests in ModelUtilTest" />
+        <item index="0" class="java.lang.String" itemvalue="Python.tweet_project" />
+        <item index="1" class="java.lang.String" itemvalue="Python tests.Unittests in NaiveBayesTest" />
         <item index="2" class="java.lang.String" itemvalue="Python.ann_example" />
         <item index="3" class="java.lang.String" itemvalue="Python.nb_example" />
-        <item index="4" class="java.lang.String" itemvalue="Python.svm_example" />
+        <item index="4" class="java.lang.String" itemvalue="Python tests.Unittests in ModelUtilTest" />
       </list>
     </recent_temporary>
   </component>
@@ -693,7 +810,13 @@
       <option name="project" value="LOCAL" />
       <updated>1447369586880</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="add tests for naive bayes and ANN">
+      <created>1447373718047</created>
+      <option name="number" value="00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1447373718047</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -712,7 +835,7 @@
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2639485" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32771084" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.16987951" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -742,7 +865,8 @@
     <MESSAGE value="add problem save and load;&#10;unit tests" />
     <MESSAGE value="add ann and nb models" />
     <MESSAGE value="add comments" />
-    <option name="LAST_COMMIT_MESSAGE" value="add comments" />
+    <MESSAGE value="add tests for naive bayes and ANN" />
+    <option name="LAST_COMMIT_MESSAGE" value="add tests for naive bayes and ANN" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -754,7 +878,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="11" column="22" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
           <folding>
-            <element signature="e#26#68#0" expanded="true" />
+            <element signature="e#26#68#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -764,7 +888,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#26#45#0" expanded="true" />
+            <element signature="e#26#45#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -790,7 +914,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="25" column="83" selection-start-line="25" selection-start-column="83" selection-end-line="25" selection-end-column="83" />
           <folding>
-            <element signature="e#26#41#0" expanded="true" />
+            <element signature="e#26#41#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -827,7 +951,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="10" column="12" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="13" />
           <folding>
-            <element signature="e#26#64#0" expanded="true" />
+            <element signature="e#26#64#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -853,7 +977,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#26#64#0" expanded="true" />
+            <element signature="e#26#64#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -863,7 +987,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#26#45#0" expanded="true" />
+            <element signature="e#26#45#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -941,7 +1065,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="11" column="22" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
           <folding>
-            <element signature="e#26#68#0" expanded="true" />
+            <element signature="e#26#68#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -958,17 +1082,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="7" column="19" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/examples/data/iris.csv">
-      <provider editor-type-id="com.intellij.database.editor.CsvTableFileEditorProvider">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-28.448277">
-          <caret line="100" column="4" selection-start-line="100" selection-start-column="4" selection-end-line="100" selection-end-column="4" />
           <folding />
         </state>
       </provider>
@@ -994,7 +1107,7 @@
         <state vertical-scroll-proportion="-8.333333">
           <caret line="15" column="40" selection-start-line="15" selection-start-column="40" selection-end-line="15" selection-end-column="40" />
           <folding>
-            <element signature="e#26#45#0" expanded="true" />
+            <element signature="e#26#45#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1018,40 +1131,41 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/examples/ann_example.py">
+    <entry file="file://$PROJECT_DIR$/learnpy/tests/unittests/ProblemTest.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="14" column="15" selection-start-line="14" selection-start-column="15" selection-end-line="14" selection-end-column="15" />
+          <caret line="24" column="41" selection-start-line="24" selection-start-column="41" selection-end-line="24" selection-end-column="41" />
+          <folding>
+            <element signature="e#26#41#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/learnpy/tools/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/learnpy/models/ModelUtil.py">
+    <entry file="file://$PROJECT_DIR$/examples/data/iris.csv">
+      <provider editor-type-id="com.intellij.database.editor.CsvTableFileEditorProvider">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="94" column="13" selection-start-line="94" selection-start-column="4" selection-end-line="94" selection-end-column="13" />
-          <folding>
-            <element signature="e#25#44#0" expanded="true" />
-          </folding>
+        <state vertical-scroll-proportion="-6.206897">
+          <caret line="57" column="33" selection-start-line="57" selection-start-column="33" selection-end-line="57" selection-end-column="33" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/learnpy/models/NaiveBayes.py">
+    <entry file="file://$PROJECT_DIR$/learnpy/models/NeuralNetwork.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="43.592594">
-          <caret line="27" column="46" selection-start-line="27" selection-start-column="46" selection-end-line="27" selection-end-column="46" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="73" column="14" selection-start-line="73" selection-start-column="14" selection-end-line="73" selection-end-column="14" />
           <folding>
             <element signature="e#26#64#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/learnpy/tests/unittests/ModelUtilTest.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="37" column="16" selection-start-line="37" selection-start-column="16" selection-end-line="37" selection-end-column="16" />
-          <folding>
-            <element signature="e#52#67#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1059,45 +1173,78 @@
     <entry file="file://$PROJECT_DIR$/examples/nb_example.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <caret line="11" column="18" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="18" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/learnpy/tests/unittests/ProblemTest.py">
+    <entry file="file://$PROJECT_DIR$/learnpy/models/NaiveBayes.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="24" column="41" selection-start-line="24" selection-start-column="41" selection-end-line="24" selection-end-column="41" />
-          <folding>
-            <element signature="e#26#41#0" expanded="true" />
-          </folding>
+          <caret line="125" column="0" selection-start-line="125" selection-start-column="0" selection-end-line="125" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/examples/ann_example.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="14" column="19" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/learnpy/models/ModelUtil.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="127" column="30" selection-start-line="127" selection-start-column="30" selection-end-line="127" selection-end-column="30" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/learnpy/tests/unittests/NaiveBayesTest.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding>
-            <element signature="e#52#67#0" expanded="true" />
-          </folding>
+          <caret line="28" column="18" selection-start-line="28" selection-start-column="8" selection-end-line="28" selection-end-column="18" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/learnpy/tests/unittests/NeuralNetworkTest.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="12" column="37" selection-start-line="12" selection-start-column="37" selection-end-line="12" selection-end-column="37" />
+          <caret line="25" column="31" selection-start-line="25" selection-start-column="31" selection-end-line="25" selection-end-column="31" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/learnpy/models/NeuralNetwork.py">
+    <entry file="file://$PROJECT_DIR$/learnpy/tests/unittests/ModelUtilTest.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.1946309">
-          <caret line="124" column="0" selection-start-line="124" selection-start-column="0" selection-end-line="124" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="37" column="16" selection-start-line="37" selection-start-column="16" selection-end-line="37" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/examples/project_example/tweet_project.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="5" column="27" selection-start-line="5" selection-start-column="27" selection-end-line="5" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/examples/project_example/pie2.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/learnpy/tools/TweetSentiment.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.062080536">
+          <caret line="16" column="26" selection-start-line="16" selection-start-column="26" selection-end-line="16" selection-end-column="26" />
           <folding>
-            <element signature="e#26#64#0" expanded="true" />
+            <element signature="e#26#41#0" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -9,3 +9,4 @@ pro = Problem("BinaryClassification", "./data/iris.csv")
 pro.set_label('Name')
 
 pro.set_model("NaiveBayes")
+pro.model.fit(None)
