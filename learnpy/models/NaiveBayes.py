@@ -34,8 +34,8 @@ class NaiveBayes(Model):
 
         # Build the pro
         self.prob_hub = {}
-        self.fit(self.data)
-        res = self.predict(self.data)
+        self.fit(None)
+
         print("Naive Bayes Model")
 
     def predict(self, data, golden):
@@ -87,7 +87,6 @@ class NaiveBayes(Model):
         return max(prob_list.items(), key=operator.itemgetter(1))[0]
 
 
-
     def fit(self, data):
         """
         Fit the model onto the given data set.
@@ -118,7 +117,7 @@ class NaiveBayes(Model):
             ulist = unique_list(self.data[col])
             self.prob_hub[col] = {}
             stat = self.data.groupby(self.class_column)[col].value_counts() / self.data.groupby(self.class_column)[col].count()
-            print(stat)
+            # print(stat)
             # for each class
             for claz in self.class_list:
                 self.prob_hub[col][claz] = {}

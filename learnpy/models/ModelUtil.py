@@ -126,4 +126,3 @@ def info_print(text):
     :return:
     """
     print("[INFO]", " ", text)
-
