@@ -89,6 +89,7 @@ def normalize_data(df):
     :return:
     """
     data = df.apply(lambda x: (x - np.min(x)) / (np.max(x) - np.min(x)))
+
     return data
 
 
@@ -100,6 +101,18 @@ def get_class(x):
     """
     if x<0.5:
         return 0
+    else:
+        return 1
+
+
+def get_class_np(x):
+    """
+    Classify based on probability. (-1 if p<0.0)
+    :param x: probability
+    :return:
+    """
+    if x<0:
+        return -1
     else:
         return 1
 
@@ -118,7 +131,6 @@ def calculate_acc(y, y0):
     return float(m)/len(y0)
 
 
-
 def info_print(text):
     """
     Helper function to print information
@@ -126,3 +138,45 @@ def info_print(text):
     :return:
     """
     print("[INFO]", " ", text)
+
+
+def stats_info(data, num_cols):
+    """
+    Get min max information form the data set
+    :param data:
+    :param num_cols:
+    :return:
+    """
+    info = {}
+    for col in num_cols:
+        info[col] = {}
+        info[col]["max"] = data[col].max()
+        info[col]["min"] = data[col].min()
+    return info
+
+
+def trans_func(x, column, info):
+    """
+    single function to normalize the columns by min, max
+    :param x: value
+    :param column: column name
+    :param info: min max dict
+    :return:
+    """
+    return (x-info[column]["min"])/(info[column]["max"] - info[column]["min"])
+
+
+def transform_data(data, num_cols, class_column, info, class_func):
+    """
+    transform the data into normalized one
+    :param data: data set object
+    :param num_cols: numerical columns
+    :param class_column: class column
+    :param info: min max dict
+    :param class_func: transform function
+    :return:
+    """
+    for col in num_cols:
+        data[col] = data[col].map(lambda x: trans_func(x, col, info))
+    data[class_column] = data[class_column].map(lambda x: class_func[x])
+    return data

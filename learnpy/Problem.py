@@ -4,6 +4,7 @@ import pandas as pd
 import json as json
 from learnpy.models.NeuralNetwork import NeuralNetwork
 from learnpy.models.NaiveBayes import NaiveBayes
+from learnpy.models.SVM import SVM
 
 
 class Problem:
@@ -41,9 +42,8 @@ class Problem:
             self.check_model()
             self.create_model()
 
-
-
-
+        # placeholder for testing data
+        self.testing_data = None
 
     def check_type(self):
         """ Check if problem type is defined
@@ -71,7 +71,7 @@ class Problem:
         if self.model_label not in ['SVM', 'NaiveBayes', 'NeuralNetwork']:
             raise Exception('Model is not defined')
 
-    def set_model(self, model):
+    def set_model(self, model, num_iter=1000, alpha=0.003):
         """ Set the problem's model
         :param self:
         :param model: model to be set
@@ -79,7 +79,7 @@ class Problem:
         """
         self.model_label = model
         self.check_model()
-        self.create_model()
+        self.create_model(num_iter, alpha)
 
     def read_data(self):
         """ Read data from the file_path
@@ -140,9 +140,37 @@ class Problem:
         # load data
         self.data = pd.read_json(data_path)
 
-    def create_model(self):
+    def create_model(self, num_iter, alpha):
+        """
+        Create models based on label value
+        :param num_iter: number of iterations
+        :param alpha: learning rate
+        :return:
+        """
         if self.model_label == 'NaiveBayes':
+            # Create Naive Bayes
             self.model = NaiveBayes(self.data, self.label)
 
         elif self.model_label == "NeuralNetwork":
-            self.model = NeuralNetwork(self.data, self.label)
+            # Create ANN
+            self.model = NeuralNetwork(self.data, self.label, the_num_iter=num_iter)
+
+        elif self.model_label == "SVM":
+            # Create SVM
+            self.model = SVM(self.data, self.label, the_num_iter=num_iter, the_alpha=alpha)
+
+    def set_testing(self, file_path):
+        """
+        Set testing data
+        :param file_path: path of testing data
+        :return:
+        """
+        self.testing_data = pd.read_csv(file_path)
+
+    def predict(self):
+        """
+        Predict on testing data
+        :return:
+        """
+        self.model.predict(self.testing_data)
+

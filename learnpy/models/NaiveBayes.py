@@ -17,9 +17,11 @@ class NaiveBayes(Model):
         :param class_column:
         :return:
         """
+        print("Naive Bayes Model created!")
+
         # create report
-        self.predict_summary = None
-        self.fit_report = None
+        self.predict_summary = {}
+        self.fit_report = {}
 
         # self.data=data
         self.data = data
@@ -34,30 +36,34 @@ class NaiveBayes(Model):
 
         # Build the pro
         self.prob_hub = {}
-        self.fit(None)
 
-        print("Naive Bayes Model")
-
-    def predict(self, data, golden):
+    def predict(self, data, training_report=False):
         """
         Predict the labels for a given data set
         :param data:
         :param golden:
         :return:
         """
-        result = []
+        output = []
         for r in range(0, len(data)):
             label = self.predict_single(data.iloc[r])
-            result.append(label)
+            output.append(label)
 
-        if golden is not None:
-            match = 0
-            for i in range(0, len(result)):
-                if result[i] == golden[i]:
-                    match += 1
-            acc = match/len(result)
-            print(acc)
-        return result
+        label_array = data[[self.class_column]].as_matrix()
+        target = list(pd.DataFrame(label_array)[0])
+
+        if training_report:
+            self.fit_report['output'] = output
+            self.fit_report['target'] = target
+            print("Training Fit done.")
+            self.report()
+
+        else:
+            self.predict_summary['output'] = output
+            self.predict_summary['target'] = target
+
+            print("Testing done.")
+            self.summary()
 
     def predict_single(self, line):
         """
@@ -86,7 +92,6 @@ class NaiveBayes(Model):
 
         return max(prob_list.items(), key=operator.itemgetter(1))[0]
 
-
     def fit(self, data):
         """
         Fit the model onto the given data set.
@@ -113,24 +118,24 @@ class NaiveBayes(Model):
 
         # for each categorical columns, we need to record P(X=x|Y=y)
         for col in self.cat_cols:
-            print(col)
             ulist = unique_list(self.data[col])
             self.prob_hub[col] = {}
             stat = self.data.groupby(self.class_column)[col].value_counts() / self.data.groupby(self.class_column)[col].count()
-            # print(stat)
             # for each class
             for claz in self.class_list:
                 self.prob_hub[col][claz] = {}
                 for uni_element in ulist:
                     self.prob_hub[col][claz][uni_element] = stat[claz][uni_element]
 
+        self.predict(self.data, True)
+
     def summary(self):
-        pass
+        print("The testing accuracy is: ", calculate_acc(self.predict_summary['output'], self.predict_summary['target']))
 
     def report(self):
-        pass
+        print("The training accuracy is: ", calculate_acc(self.fit_report['output'], self.fit_report['target']))
 
     def data_info(self):
-        pass
+        print(self.prob_hub)
 
 

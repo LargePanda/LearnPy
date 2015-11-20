@@ -45,5 +45,9 @@ class ModelUtilTest(unittest.TestCase):
         x = get_class(0.3)
         self.assertEqual(0, x)
 
+    def test_get_class_np(self):
+        x = get_class_np(-0.3)
+        self.assertEqual(-1, x)
+
 suite = unittest.TestLoader().loadTestsFromTestCase(ModelUtilTest)
 unittest.TextTestRunner().run(suite)
